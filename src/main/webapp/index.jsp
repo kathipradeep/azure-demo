@@ -34,6 +34,7 @@
         }
         getlightstatus();
         function getlightstatus(){
+          // getting data
             firebase.database().ref('/').once('value',function(snapshot){
                 snapshot.forEach(function(childSnapshot){
                     var childKey = childSnapshot.key;
