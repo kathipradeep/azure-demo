@@ -19,19 +19,20 @@
       firebase.initializeApp(firebaseConfig);
       
         function lightOn() {  
-      // Reference messages collection
+    // to turnn  on light 
           var messagesRef = firebase.database().ref('automation').set({
             "light":1 
           });
           getlightstatus();
         }
         function lightOff() {  
-      // Reference messages collection
+      // to turn off light 
           var messagesRef = firebase.database().ref('automation').set({
             "light":0 
           });
           getlightstatus();
         }
+        getlightstatus();
         function getlightstatus(){
             firebase.database().ref('/').once('value',function(snapshot){
                 snapshot.forEach(function(childSnapshot){
@@ -42,7 +43,7 @@
             })
         }
     
-        getlightstatus();
+        
 
 </script>        
 <h2>Input Button</h2>
