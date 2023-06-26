@@ -19,7 +19,7 @@
       firebase.initializeApp(firebaseConfig);
       
         function lightOn() {  
-    // to turnn  on light 
+    // to turnn  on light  
           var messagesRef = firebase.database().ref('automation').set({
             "light":1 
           });
